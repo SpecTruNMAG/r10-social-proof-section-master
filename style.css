@@ -1,0 +1,211 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap");
+
+:root {
+    /*### Primary*/
+    --primary-1: hsl(300, 43%, 22%);
+    --primary-2: hsl(333, 80%, 67%);
+    /*### Neutral*/
+    --neutral-1: hsl(303, 10%, 53%);
+    --neutral-2: hsl(300, 24%, 96%);
+    --neutral-3: hsl(0, 0%, 100%);
+    --very-small: 1rem;
+    --small: 1.6rem;
+    --medium: 1.8rem;
+    --large: 3.8rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: "League Spartan", sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main {
+    background: url("./images/bg-pattern-top-mobile.svg") no-repeat top left,
+        url("./images/bg-pattern-bottom-mobile.svg") no-repeat bottom right;
+    padding: 5rem 2.4rem 5rem 2.4rem;
+}
+
+.header-title {
+    text-align: center;
+    font-size: var(--large);
+    color: var(--primary-1);
+    line-height: 3rem;
+    padding: 1.5rem 0 2rem 0;
+    font-weight: 700;
+}
+
+.header-description {
+    font-size: var(--medium);
+    color: var(--neutral-1);
+    text-align: center;
+    padding: 1rem 0 4.5rem 0;
+    font-weight: 500;
+}
+
+.rated-start {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding-bottom: 3rem;
+}
+
+.rated-start-div {
+    background-color: var(--neutral-2);
+    padding: 1.8rem;
+    font-size: var(--medium);
+    font-weight: 700;
+    color: var(--primary-1);
+    border-radius: 1rem;
+    text-align: center;
+}
+
+.card {
+    background-color: var(--primary-1);
+    margin: 2rem 0 2rem 0;
+    padding: 3rem 3.5rem 3rem 3.5rem;
+    border-radius: 1rem;
+}
+
+.card-title {
+    width: 14rem;
+    color: var(--neutral-2);
+    font-size: var(--small);
+}
+
+.card-title span {
+    color: var(--neutral-1);
+    font-weight: 400;
+}
+
+.card-profile {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: left;
+    gap: 2rem;
+    padding: 2rem 0 2rem 0;
+}
+
+.card-image {
+    width: 4rem;
+    border-radius: 3rem;
+}
+
+.card-description {
+    font-size: var(--small);
+    color: var(--neutral-2);
+    line-height: 2rem;
+}
+
+@media screen and (min-width: 1440px) {
+    html {
+        font-size: 65%;
+    }
+
+    body {
+        height: 100vh;
+    }
+
+    .main {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        background: url("./images/bg-pattern-top-desktop.svg") no-repeat top left,
+            url("./images/bg-pattern-bottom-desktop.svg") no-repeat bottom right;
+        padding: 100px 100px 100px 165px;
+        width: 1440px;
+        height: 800px;
+    }
+
+    .main-container{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .header,
+    .rated-start {
+        width: 50%;
+    }
+
+    .header-title {
+        font-size: 5rem;
+        line-height: 4rem;
+    }
+
+    .header-description,
+    .header-title {
+        width: 40rem;
+        text-align: left;
+    }
+
+    .rated-start {
+        position: relative;
+    }
+
+    .rated-start-div {
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        gap: 2rem;
+        padding: 1.5rem 0rem 1.5rem 4rem;
+        font-size: 1.6rem;
+        position: absolute;
+        width: 44rem;
+    }
+
+    .div-1 {
+        top: 0;
+        left: 0;
+    }
+
+    .div-2 {
+        top: 7rem;
+        left: 5rem;
+    }
+
+    .div-1 {
+        top: 14rem;
+        left: 10rem;
+    }
+
+    .rated-start-div>img {
+        width: 15px;
+        height: 15px;
+    }
+
+    .group-card {
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+        position: relative;
+    }
+
+    .card {
+        position: absolute;
+        width: 35rem;
+    }
+
+    .card-1 {
+        top: 0;
+        left: 0;
+    }
+
+    .card-2 {
+        top: 2rem;
+        left: 38rem;
+    }
+
+    .card-3 {
+        top: 4rem;
+        left: 76rem;
+    }
+}
